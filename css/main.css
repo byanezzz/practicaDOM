@@ -12,6 +12,8 @@
     color: #FFF;
     border:none;
     padding: 1em;
+    margin-bottom: 1em;
+    cursor: pointer;
 }
 #cont{
     margin-left: 1em;

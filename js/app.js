@@ -1,3 +1,12 @@
+function validation(){
+    var comments=document.getElementById("comment").value;
+    if(comments===""){
+        alert("No debe dejar el campo vacío");
+    }else{
+        add();
+    }
+}
+
 function add(){
    
     /*Tomo el valor de lo q el usuario escribe*/
@@ -28,10 +37,13 @@ function add(){
 
     check.addEventListener("click", function(){
         paragraph.classList.toggle("strike-out");
+        if(check.checked){
+            trash.addEventListener("click",function(){
+                cont.removeChild(newComment);
+            })
+        }
     })
-    trash.addEventListener("click",function(){
-        cont.removeChild(newComment);
-    })
+    
     heart.addEventListener("click", function(){
         heart.classList.toggle("red")
     })
